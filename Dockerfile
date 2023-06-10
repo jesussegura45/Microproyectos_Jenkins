@@ -1,4 +1,4 @@
-FROM node:20
+FROM node:16
 
 WORKDIR /microserviciosproyectos
 
@@ -8,4 +8,4 @@ RUN npm install
 
 EXPOSE 7000
 
-CMD [ "npm","start" ]
+CMD [ "npm","server.js" ]
