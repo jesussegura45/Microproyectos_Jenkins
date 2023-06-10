@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  microserviciosproyectos:
+    container_name: microserviciosproyectos
+    image: microserviciosproyectos:v1
+    build:
+      context: .
+    ports: 
+      - "7000"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - PORT=7000
+    networks: 
+      - proyectos-app
+
+  balanceador-cargas:
+    container_name: balanceador-cargas
+    image: balanceador-cargas:v1
+    build:
+      context: ./balanceador
+    ports: 
+      - "7000:80"
+    networks: 
+      - proyectos-app
+
+
+networks:
+ proyectos-app:
