@@ -2,7 +2,7 @@ version: '3.7'
 services:
   microserviciosproyectos:
     container_name: microserviciosproyectos
-    image: microserviciosproyectos:v1
+    image: microserviciosproyectos:latest
     build:
       context: .
     ports: 
@@ -15,7 +15,7 @@ services:
 
   balanceador-cargas:
     container_name: balanceador-cargas
-    image: balanceador-cargas:v1
+    image: balanceador-cargas:latest
     build:
       context: ./balanceador
     ports: 
