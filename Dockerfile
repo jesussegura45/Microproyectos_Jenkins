@@ -1,6 +1,6 @@
 FROM node:16
 
-WORKDIR /microserviciosproyectos
+WORKDIR /usr/src/app
 
 COPY /package*.json ./
 
